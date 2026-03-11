@@ -1,0 +1,46 @@
+import Layout from "../../../layout/Layout";
+import Button from "@mui/material/Button";
+import Group from "../../../assets/images/Group.svg";
+import Checkbox from "@mui/material/Checkbox";
+
+export default function Dashboard() {
+  return (
+    <Layout sidebar={true}>
+      <h1 className="title">dashboard</h1>
+      <span className="disc disc-red"></span>
+      <span className="disc disc-orange"></span>
+      <div className="alert-label alert-red">
+        {/* <img src="" alt="" /> */}
+        <span>These products require immediate attention!</span>
+      </div>
+      <div className="alert-label alert-orange">
+        {/* <img src="" alt="" /> */}
+        <span>These products require immediate attention!</span>
+      </div>
+      <Button variant="taupeBrownFilled">
+        <img src={Group} alt="" />
+        Success Filled
+      </Button>
+      <Button variant="taupeBrownOutline">
+        <img src={Group} alt="" />
+        Taupe Brown Outline
+      </Button>
+      <Button variant="grayOutline">
+        <img src={Group} alt="" />
+        Gray Outline
+      </Button>
+      <Button variant="grayFilledOutline">
+        <img src={Group} alt="" />
+        Gray FilledOutline
+      </Button>
+      <span className="status status-green">Mail Sent</span>
+      <Checkbox
+        sx={{
+          "& .MuiSvgIcon-root": {
+            borderRadius: "4px",
+          },
+        }}
+      />
+    </Layout>
+  );
+}

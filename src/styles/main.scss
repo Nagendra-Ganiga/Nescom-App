@@ -1,0 +1,375 @@
+// Common styles for the application Start
+@font-face {
+  font-family: "NestleTextTF-Bold";
+  src: url(../assets/fonts/NestleTextTF-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "NestleTextTF-Book";
+  src: url(../assets/fonts/NestleTextTF-Book.woff) format("woff");
+}
+@font-face {
+  font-family: "NestleTextTF-Italic";
+  src: url(../assets/fonts/NestleTextTF-Italic.woff) format("woff");
+}
+@font-face {
+  font-family: "NestleTextTF-Light";
+  src: url(../assets/fonts/NestleTextTF-Light.woff) format("woff");
+}
+
+// Colors
+$white: #ffffff;
+$black: #000000;
+$jetBlack: #141519;
+$taupeBrown: #63513d;
+$red: #f44539;
+$orange: #ff9700;
+$redLight: #ffedebb2;
+$orangeLight: #fff5ddb2;
+$warmLight: #fff9f3;
+$bluishLight: #f6f9ff;
+$lightGray: #f6f6f6;
+$dimGray: #626262;
+$gray: #d9d9d9;
+$green: #287040;
+$lightGreen: #f0fff5;
+$lightGrayishBlue: #f8f9fb;
+$shadeGray: #a9a9a9;
+
+// font for the application
+$NestleTextTF-Bold: "NestleTextTF-Bold";
+$NestleTextTF-Book: "NestleTextTF-Book";
+$NestleTextTF-Italic: "NestleTextTF-Italic";
+$NestleTextTF-Light: "NestleTextTF-Light";
+
+$shadowBox: #0000000d 0px 4px 16px 0;
+
+$leftRightPadding: 0 40px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: $NestleTextTF-Book;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: $lightGrayishBlue;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $black;
+  font-family: $NestleTextTF-Bold;
+}
+p,
+span {
+  color: $jetBlack;
+  font-family: $NestleTextTF-Book;
+}
+
+// Icon style Start
+.icon-size {
+  width: 24px;
+  height: auto;
+}
+// Icon style End
+
+// Disc Style Start
+.disc {
+  width: 12px;
+  height: 12px;
+  background-color: $black;
+  display: block;
+  border-radius: 50%;
+}
+.disc-orange {
+  background: $orange;
+}
+.disc-red {
+  background: $red;
+}
+// Disc Style End
+
+// alert style start
+.alert-label {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  display: flex;
+  gap: 10px;
+  img {
+    width: 12px;
+    height: 10px;
+  }
+  span {
+    color: $red;
+    font-size: 14px;
+    font-family: $NestleTextTF-Book;
+  }
+}
+.alert-red {
+  background: $redLight;
+  color: $red;
+  span {
+    color: $red;
+  }
+}
+.alert-orange {
+  background: $orangeLight;
+  color: $orange;
+  span {
+    color: $orange;
+  }
+}
+// alert style End
+
+// Text color style start
+.red-text {
+  color: $red;
+}
+.orange-text {
+  color: $orange;
+}
+// Text color  style End
+
+// Status style start
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  display: inline-block;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+.status-green {
+  background: $lightGreen;
+  color: $green;
+  border: 1px solid $green;
+}
+// Status style End
+// Common styles for the application End
+
+// NavBar Style Start
+.nav {
+  background: $white;
+  box-shadow: #0000000d 0px 4px 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+  height: 60px;
+  padding: $leftRightPadding;
+  .nav-left {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .nav-left-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      height: 100%;
+      .nav-logo {
+        img {
+          width: 100%;
+          max-width: 136px;
+          height: auto;
+          display: block;
+        }
+      }
+      .nav-links-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        height: 100%;
+        .nav-link {
+          text-decoration: none;
+          font-size: 16px;
+          font-family: $NestleTextTF-Book;
+          color: $black;
+          font-size: 16px;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          border-bottom: 2px solid $white;
+
+          &.active {
+            color: $taupeBrown;
+            font-family: $NestleTextTF-Bold;
+            border-bottom: 2px solid $taupeBrown;
+          }
+        }
+      }
+    }
+  }
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+  }
+}
+// Login Dropdown Style Start
+.login-wrapp {
+  position: relative;
+  height: 100%;
+  .login-dropdown {
+    height: 100%;
+    .login-button {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      border: none;
+      background: transparent;
+      gap: 10px;
+      cursor: pointer;
+
+      .profile-frame {
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        width: auto;
+        height: 36px;
+      }
+      .login-namme {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        span {
+          font-size: 16px;
+          font-family: $NestleTextTF-Book;
+        }
+        .down-arrow {
+          width: 12px;
+          height: auto;
+          transition: 0.3s ease-in-out;
+          -webkit-transition: 0.3s ease-in-out;
+          -moz-transition: 0.3s ease-in-out;
+          -ms-transition: 0.3s ease-in-out;
+          -o-transition: 0.3s ease-in-out;
+        }
+      }
+      &.active {
+        .down-arrow {
+          transform: rotate(180deg);
+          -webkit-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  .dropdown-content {
+    min-width: 220px;
+    opacity: 0;
+    position: absolute;
+    bottom: -204px;
+    right: 0;
+    background: $white;
+    padding: 20px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    box-shadow: $shadowBox;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    pointer-events: none;
+    .dropdown-wrapp {
+      border-bottom: 1px solid $gray;
+      padding-bottom: 15px;
+      .label {
+        span {
+          font-size: 14px;
+          font-family: $NestleTextTF-Book;
+          color: $shadeGray;
+        }
+      }
+      .text-content {
+        span {
+          font-size: 14px;
+          font-family: $NestleTextTF-Book;
+          color: $jetBlack;
+        }
+      }
+    }
+    .link-page-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      .link-rw {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        img {
+          width: 13px;
+          height: auto;
+        }
+        span {
+          font-size: 14px;
+          font-family: $NestleTextTF-Book;
+          color: $jetBlack;
+        }
+      }
+    }
+    &.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+// Login Dropdown Style End
+// NavBar Style End
+
+// Layout Style Start
+.main-wrapper {
+  display: flex;
+  gap: 30px;
+  padding: $leftRightPadding;
+  margin-block: 20px;
+  .sidebar {
+    background: $white;
+    border-radius: 16px;
+    width: 33%;
+    max-width: 330px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    box-shadow: $shadowBox;
+    padding: 25px;
+  }
+  .main-content {
+    flex: 1;
+    background: $white;
+    width: 70%;
+    padding: 25px;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    box-shadow: $shadowBox;
+  }
+}
+// Layout Style End
