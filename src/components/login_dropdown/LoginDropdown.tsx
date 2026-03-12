@@ -16,13 +16,23 @@ export default function LoginDropdown() {
   const { ref: dropdownRef, active, toggleActive } = useOutsideClick(false);
   const dropdownActiveClass = active ? "active" : "";
 
-  const getScrapData = async () => [
-    {
-      name: "Steve Smith",
-      email: "steve.smith@example.com",
-    },
-  ];
-  const { data, loading } = useFetch(getScrapData, 1500);
+  const getScrapData = async () => {
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+    // const response = await fetch(
+    //   "https://jsonplaceholder.typicode.com/todos/1",
+    // );
+    // const json = await response.json();
+
+    // return [json];
+
+    return [
+      {
+        name: "Steve Smith",
+        email: "steve.smith@example.com",
+      },
+    ];
+  };
+  const { data, loading } = useFetch(getScrapData);
 
   const dataValue = data?.[0];
 

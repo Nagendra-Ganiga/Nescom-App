@@ -14,6 +14,7 @@ export default function useFetch<T>(
 
   useEffect(() => {
     let isMounted = true;
+    let timer: ReturnType<typeof setTimeout>;
 
     const fetchData = async () => {
       try {
@@ -29,13 +30,14 @@ export default function useFetch<T>(
     };
 
     if (delay > 0) {
-      setTimeout(fetchData, delay);
+      timer = setTimeout(fetchData, delay);
     } else {
       fetchData();
     }
 
     return () => {
       isMounted = false;
+      if (timer) clearTimeout(timer);
     };
   }, [fetchFunc, delay]);
 
