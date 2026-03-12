@@ -14,7 +14,7 @@ declare module "@mui/material/Button" {
 const baseTheme = createTheme({
   palette: {
     primary: {
-      main: colors.jetBlack,
+      main: colors.taupeBrown,
     },
     secondary: {
       main: colors.orange,
