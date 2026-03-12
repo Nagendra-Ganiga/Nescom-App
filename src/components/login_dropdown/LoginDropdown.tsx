@@ -8,6 +8,7 @@ import SkeletonWrapper from "../../common_ui/mui_skeleton/skeleton_wrapper/skele
 import ContactManagment from "../../assets/images/ContactManagment.svg";
 import Logout from "../../assets/images/Logout.svg";
 import UserManagment from "../../assets/images/UserManagment.svg";
+import PATHS from "../../routes/Paths";
 
 export default function LoginDropdown() {
   // It is coming from the useOutsideClick custom hook,
@@ -74,11 +75,11 @@ export default function LoginDropdown() {
           </div>
         </div>
         <div className="link-page-wrapper">
-          <Link to={"/user-management"} className="link-rw">
+          <Link to={PATHS.USER_MANAGEMENT} className="link-rw">
             <img src={UserManagment} alt="User Management" />
             <span>User Management</span>
           </Link>
-          <Link to={"/contact-management"} className="link-rw">
+          <Link to={PATHS.CONTACT_MANAGEMENT} className="link-rw">
             <img src={ContactManagment} alt="Contact Management" />
             <span>Contact Management</span>
           </Link>

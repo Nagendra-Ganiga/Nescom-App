@@ -73,13 +73,15 @@ const theme = createTheme(baseTheme, {
         root: {
           display: "flex",
           alignItems: "center",
-          gap: "5px",
+          gap: "8px",
           borderRadius: "8px",
-          padding: "8px 30px",
+          // padding: "8px 30px",
+          padding: "8px 20px",
           textTransform: "none",
           border: `1px solid ${colors.black}`,
           backgroundColor: "transparent",
           color: colors.black,
+          height: "100%",
         },
       },
 
@@ -162,10 +164,20 @@ const theme = createTheme(baseTheme, {
         },
       },
     },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          borderRadius: "8px",
+          padding: "2px 20px",
+          borderColor: colors.gray,
+          fontSize: "14px",
+        },
+      },
+    },
     MuiTextField: {
       styleOverrides: {
         root: {
-          marginBottom: "16px",
+          borderRadius: "8px",
         },
       },
     },

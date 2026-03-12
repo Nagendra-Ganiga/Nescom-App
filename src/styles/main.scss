@@ -72,6 +72,13 @@ span {
   color: $jetBlack;
   font-family: $NestleTextTF-Book;
 }
+// Common
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: $jetBlack;
+  font-size: 20px;
+}
 
 // Icon style Start
 .icon-size {
@@ -294,6 +301,7 @@ span {
     -ms-transition: 0.3s ease-in-out;
     -o-transition: 0.3s ease-in-out;
     pointer-events: none;
+    z-index: 1;
     .dropdown-wrapp {
       border-bottom: 1px solid $gray;
       padding-bottom: 15px;
@@ -373,3 +381,22 @@ span {
   }
 }
 // Layout Style End
+
+// Table Section Style Starts Here
+.table-section {
+  .table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    .table-right {
+      .table-right-rw {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    }
+  }
+}
+// Table Section Style Starts Here
