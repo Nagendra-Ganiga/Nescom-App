@@ -1,8 +1,8 @@
 // src/images/index.ts
 import Add from "../Add.svg";
 import ContactManagement from "../ContactManagment.svg";
-import Delete from "..Add.svg";
-import DownArrow from "../DownArrow.svg";
+import Delete from "../Delete.svg";
+import DownArrow from "../DownArow.svg";
 import Edit from "../Edit.svg";
 import Export from "../Export.svg";
 import FrameLogin from "../FrameLogin.svg";
