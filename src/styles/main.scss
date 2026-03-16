@@ -35,6 +35,7 @@ $green: #287040;
 $lightGreen: #f0fff5;
 $lightGrayishBlue: #f8f9fb;
 $shadeGray: #a9a9a9;
+$lightPeach: #ffeedb;
 
 // font for the application
 $NestleTextTF-Bold: "NestleTextTF-Bold";
@@ -301,7 +302,7 @@ span {
     -ms-transition: 0.3s ease-in-out;
     -o-transition: 0.3s ease-in-out;
     pointer-events: none;
-    z-index: 1;
+    z-index: 111;
     .dropdown-wrapp {
       border-bottom: 1px solid $gray;
       padding-bottom: 15px;
@@ -352,9 +353,11 @@ span {
 // Layout Style Start
 .main-wrapper {
   display: flex;
+  align-items: flex-start;
   gap: 30px;
   padding: $leftRightPadding;
   margin-block: 20px;
+  margin-bottom: 0;
   .sidebar {
     background: $white;
     border-radius: 16px;
@@ -372,12 +375,14 @@ span {
     background: $white;
     width: 70%;
     padding: 25px;
-    border-radius: 16px;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -o-border-radius: 16px;
+    border-radius: 16px 16px 0 0;
+    -webkit-border-radius: 16px 16px 0 0;
+    -moz-border-radius: 16px 16px 0 0;
+    -ms-border-radius: 16px 16px 0 0;
+    -o-border-radius: 16px 16px 0 0;
     box-shadow: $shadowBox;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
   }
 }
 // Layout Style End
@@ -399,4 +404,33 @@ span {
     }
   }
 }
+.table-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.pages-list-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.table-icon-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.pagination-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
 // Table Section Style Starts Here
+
+// Table Height Control Start
+.user-management-table {
+  height: calc(100vh - 280px) !important;
+  overflow-y: auto;
+}
+// Table Height Control End

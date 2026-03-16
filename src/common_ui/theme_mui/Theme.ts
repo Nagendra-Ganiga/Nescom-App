@@ -181,6 +181,71 @@ const theme = createTheme(baseTheme, {
         },
       },
     },
+    MuiTable: {
+      styleOverrides: {
+        root: {
+          borderCollapse: "separate",
+        },
+      },
+    },
+    MuiTableContainer: {
+      styleOverrides: {
+        root: {
+          border: `1px solid ${colors.gray}`,
+          borderRadius: "8px",
+        },
+      },
+    },
+    MuiTableCell: {
+      styleOverrides: {
+        root: {
+          padding: "10px 16px",
+          color: colors.black,
+          borderBottom: `1px solid ${colors.gray}`,
+        },
+        head: {
+          backgroundColor: colors.lightGray,
+          fontFamily: FontFamily.Bold,
+          fontSize: "14px",
+          "& .MuiTableSortLabel-root": {
+            fontFamily: FontFamily.Bold,
+          },
+          "&:hover .MuiTableSortLabel-root": {
+            opacity: 1,
+            color: colors.black,
+            "& .MuiTableSortLabel-icon": {
+              opacity: 1,
+              color: colors.black,
+              "&:hover .MuiTableSortLabel-icon": {
+                opacity: 1,
+                color: colors.black,
+              },
+            },
+          },
+        },
+      },
+    },
+    MuiTableRow: {
+      styleOverrides: {
+        borderBottom: `1px solid ${colors.gray}`,
+        root: {
+          "&:hover": {
+            backgroundColor: "#F9F9F9",
+          },
+        },
+      },
+    },
+    MuiPaginationItem: {
+      styleOverrides: {
+        root: {
+          color: colors.shadeGray,
+          " &.Mui-selected": {
+            backgroundColor: colors.lightPeach,
+            color: colors.taupeBrown,
+          },
+        },
+      },
+    },
   },
 });
 

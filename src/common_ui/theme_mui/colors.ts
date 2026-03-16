@@ -15,4 +15,5 @@ export const colors = {
   green: "#287040",
   lightGrayishBlue: "#f8f9fb",
   shadeGray: "#A9A9A9",
+  lightPeach: "#FFEEDB",
 };

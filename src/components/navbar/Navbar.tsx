@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import NescomLogo from "../../assets/images/NescomLogo.svg";
 import LoginDropdown from "../login_dropdown/LoginDropdown";
 import { NavLink } from "react-router-dom";
+import { ImagesIndex } from "../../assets/images/image_index/ImageIndex";
+
 export default function Navbar() {
   return (
     <nav className="nav">
@@ -9,7 +10,7 @@ export default function Navbar() {
         <div className="nav-left-wrapper">
           <div className="nav-logo">
             <Link to="/">
-              <img src={NescomLogo} alt="Logo" />
+              <img src={ImagesIndex.NescomLogo} alt="Logo" />
             </Link>
           </div>
           <div className="nav-links-wrapper">

@@ -1,14 +1,10 @@
-import FrameLogin from "../../assets/images/FrameLogin.svg";
-import DownArow from "../../assets/images/DownArow.svg";
 import { Link } from "react-router-dom";
 import { useOutsideClick } from "../../hooks/use_outside_click/useOutsideClick";
 import useFetch from "../../hooks/use_fetch/useFetch";
 import Skeleton from "@mui/material/Skeleton";
 import SkeletonWrapper from "../../common_ui/mui_skeleton/skeleton_wrapper/skeletonWrapper";
-import ContactManagment from "../../assets/images/ContactManagment.svg";
-import Logout from "../../assets/images/Logout.svg";
-import UserManagment from "../../assets/images/UserManagment.svg";
 import PATHS from "../../routes/Paths";
+import { ImagesIndex } from "../../assets/images/image_index/ImageIndex";
 
 export default function LoginDropdown() {
   // It is coming from the useOutsideClick custom hook,
@@ -51,7 +47,11 @@ export default function LoginDropdown() {
             />
           }
         >
-          <img className="profile-frame" src={FrameLogin} alt="User" />
+          <img
+            className="profile-frame"
+            src={ImagesIndex.FrameLogin}
+            alt="User"
+          />
         </SkeletonWrapper>
 
         <div className="login-namme">
@@ -65,7 +65,11 @@ export default function LoginDropdown() {
             loading={loading}
             skeleton={<Skeleton variant="text" sx={{ width: "12px" }} />}
           >
-            <img className="down-arrow" src={DownArow} alt="Down Arrow" />
+            <img
+              className="down-arrow"
+              src={ImagesIndex.DownArrow}
+              alt="Down Arrow"
+            />
           </SkeletonWrapper>
         </div>
       </button>
@@ -86,15 +90,15 @@ export default function LoginDropdown() {
         </div>
         <div className="link-page-wrapper">
           <Link to={PATHS.USER_MANAGEMENT} className="link-rw">
-            <img src={UserManagment} alt="User Management" />
+            <img src={ImagesIndex.UserManagement} alt="User Management" />
             <span>User Management</span>
           </Link>
           <Link to={PATHS.CONTACT_MANAGEMENT} className="link-rw">
-            <img src={ContactManagment} alt="Contact Management" />
+            <img src={ImagesIndex.ContactManagement} alt="Contact Management" />
             <span>Contact Management</span>
           </Link>
           <Link to={"/logout"} className="link-rw">
-            <img src={Logout} alt="Logout" />
+            <img src={ImagesIndex.Logout} alt="Logout" />
             <span>Logout</span>
           </Link>
         </div>

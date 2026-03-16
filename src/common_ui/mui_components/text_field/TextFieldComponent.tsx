@@ -1,6 +1,6 @@
 import TextField from "@mui/material/TextField";
 import InputAdornment from "@mui/material/InputAdornment";
-import Search from "../../../assets/images/Search.svg";
+import { ImagesIndex } from "../../../assets/images/image_index/ImageIndex";
 
 interface CustomTextFieldProps {
   value: string;
@@ -24,7 +24,7 @@ export default function TextFieldComponent({
       InputProps={{
         startAdornment: (
           <InputAdornment position="start">
-            <img src={Search} alt="Search" />
+            <img src={ImagesIndex.Search} alt="Search" />
           </InputAdornment>
         ),
       }}

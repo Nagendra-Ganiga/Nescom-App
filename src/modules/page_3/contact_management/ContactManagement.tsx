@@ -1,8 +1,7 @@
 import Layout from "../../../layout/Layout";
 import { useSearch } from "../../../hooks/use_saearch/useSearch";
-import Export from "../../../assets/images/Export.svg";
-import Add from "../../../assets/images/Add.svg";
 import TableSection from "../../../components/table_section/TableSection";
+import { ImagesIndex } from "../../../assets/images/image_index/ImageIndex";
 import "../styles/styles.scss";
 
 export default function ContactManagement() {
@@ -15,8 +14,8 @@ export default function ContactManagement() {
         search={search}
         placeholderText="Search"
         onSearchChange={handleSearch}
-        exportIcon={Export}
-        addIcon={Add}
+        exportIcon={ImagesIndex.Export}
+        addIcon={ImagesIndex.Add}
         addText="Add Contact"
         exportText="Export"
       />
